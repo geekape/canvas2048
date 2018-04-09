@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>2048</title>
-	<style>
 
-		canvas{
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: #bbada0;
-}
-	</style>
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            background-color: #bbada0;
+            width: 550px;
+            height: 550px;
+        }
+        
+        .item {
+            width: 550px;
+            margin: 20px auto;
+            height: 50px;
+        }
+        
+        .item span {
+            font-size: 30px;
+            float: left;
+            color: #776e65;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        
+        .item button {
+            font-size: 20px;
+            float: right;
+            width: 120px;
+            height: 40px;
+            background: #bbada0;
+            border: 0;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: inset 2px 2px 3px 1px #c7c1bb;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .item button:hover {
+            background: #a29c96;
+        }
+    </style>
 </head>
+
 <body>
-	<center id="score" style="font:bold 25px Arial,Microsoft Yahei"></center><br/>
-	<canvas id="canvas" width="500" height="500"></canvas>
-	
-	<script src="2048.js"></script>
+    <div class="item">
+        <span id="score"></span>
+        <span id="history"></span>
+        <button id="btn">New Game</button>
+    </div>
+    <canvas id="canvas"></canvas>
+
+    <script src="2048.js"></script>
 </body>
+
 </html>
